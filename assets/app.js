@@ -413,7 +413,7 @@ const App = (() => {
   renderers.analytics = () => {
     Charts.bars($('#chart-campaign'), D.campaignPerf.labels, [D.campaignPerf.delivery, D.campaignPerf.reply], { colors: ['#10b981', '#8b5cf6'] });
     Charts.bars($('#chart-cs'), D.csMetrics.labels, [D.csMetrics.handled, D.csMetrics.bot], { colors: ['#8b5cf6', '#06b6d4'] });
-    Charts.hbars($('#chart-cost'), D.costData.map(c => ({ label: c.label, pct: c.val, sub: 'Rp ' + c.val.toFixed(1).replace('.', ',') + ' jt bulan ini' })), { color: 'linear-gradient(90deg,#059669,#8b5cf6)' });
+    Charts.hbars($('#chart-cost'), D.costData.map(c => ({ label: c.label, pct: c.val, sub: 'Rp ' + c.val.toFixed(1).replace('.', ',') + ' jt bulan ini' })), { color: 'linear-gradient(90deg,#059669,#0d9488)' });
   };
   function exportReport() {
     const csv = 'modul,pesan,delivered\nWhatsApp,231200,98.2%\nSMS,74800,99.1%\nEmail,34000,89.3%';
