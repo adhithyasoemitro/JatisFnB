@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>JATIS FMCG Cloud — Platform Komunikasi Digital untuk FMCG Indonesia</title>
+<meta name="description" content="Satu platform komunikasi digital omnichannel untuk seluruh ekosistem FMCG Indonesia — dari principal, distributor, hingga warung dan konsumen akhir.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<!-- ══════════════ BACKGROUND ORBS ══════════════ -->
+<div class="bg-orbs" aria-hidden="true">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+  <div class="orb orb-4"></div>
+  <div class="grid-overlay"></div>
+</div>
+
+<!-- ══════════════ LANDING ══════════════ -->
+<div id="landing" class="view">
+  <header class="nav glass" id="site-nav">
+    <div class="nav-inner">
+      <a class="brand" href="#" onclick="App.go('landing')">
+        <span class="brand-mark">J</span>
+        <span class="brand-text">JATIS<b>·FMCG</b></span>
+      </a>
+      <nav class="nav-links" id="nav-links">
+        <a href="#fitur">Fitur</a>
+        <a href="#skenario">Skenario</a>
+        <a href="#harga">Harga</a>
+        <a href="#testimoni">Testimoni</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="btn btn-ghost btn-sm" onclick="App.go('auth')">Masuk</button>
+        <button class="btn btn-primary btn-sm glow" onclick="App.go('auth', {mode:'register'})">Coba Gratis</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <span class="hero-badge pulse-dot"><i></i> WhatsApp Business Solution Provider · Tbk (JATI)</span>
+        <h1 class="hero-title">Komunikasi FMCG Indonesia, <span class="grad-text" id="rotating-word">dari WhatsApp.</span></h1>
+        <p class="hero-sub">Satu platform cloud untuk seluruh ekosistem — principal, distributor, warung, sampai konsumen akhir. Cek stok, pesan barang, klaim insentif, dan layani pelanggan 24/7, semua dalam chat.</p>
+        <div class="hero-cta">
+          <button class="btn btn-primary btn-lg glow" onclick="App.go('auth',{mode:'register'})">🚀 Mulai Sekarang — Gratis 14 Hari</button>
+          <button class="btn btn-ghost btn-lg" onclick="App.go('auth')"><span class="play-ico">▶</span> Lihat Demo Langsung</button>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><b data-count="500">0</b><span>+ Klien Korporat</span></div>
+          <div class="stat"><b data-count="90">0</b><span>Juta+ Pesan / Bulan</span></div>
+          <div class="stat"><b data-count="12">0</b><span>Ribu+ Merchant UKM</span></div>
+          <div class="stat"><b data-count="2018" data-suffix="">0</b><span>Partner Resmi WhatsApp</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="phone-frame glass-strong">
+          <div class="phone-head">
+            <div class="phone-avatar">MN</div>
+            <div>
+              <b>Makanan Nusantara</b>
+              <span class="online-dot">● online · dibalas instan</span>
+            </div>
+          </div>
+          <div class="phone-chat" id="demo-chat">
+            <div class="msg in">Halo! Saya distributor Jaya Abadi. Mau cek stok <b>Indomie Goreng</b> dong 🙏</div>
+            <div class="msg out typing" id="demo-typing"><span></span><span></span><span></span></div>
+            <div class="msg out" id="demo-msg1" hidden>✅ Stok <b>Indomie Goreng (Dus)</b>: <b>1.240 dus</b> di Gudang Cikarang<br><small>Harga: Rp 102.500/dus · Khusus distributor wilayah JKT</small></div>
+            <div class="msg in" id="demo-msg2" hidden>Mantap! Langsung pesan 100 dus ya, kirim ke Gudang Jaya Abadi 🚚</div>
+            <div class="msg out" id="demo-msg3" hidden>📦 Pesanan <b>#ORD-88321</b> diterima! Status: <b>Diproses</b> · Estimasi sampai besok 14.00</div>
+          </div>
+          <div class="phone-input"><span>💬 Ketik pesan…</span><span class="mic">🎤</span></div>
+        </div>
+        <div class="float-card fc-1 glass-strong"><span class="fc-ico">📊</span><div><b>+38%</b><small>Engagement</small></div></div>
+        <div class="float-card fc-2 glass-strong"><span class="fc-ico">🛡️</span><div><b>ISO 27001</b><small>Keamanan Data</small></div></div>
+        <div class="float-card fc-3 glass-strong"><span class="fc-ico">⚡</span><div><b>&lt; 2 detik</b><small>Respons Bot</small></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BANNER -->
+  <section class="ticker glass">
+    <div class="ticker-inner">
+      <div class="ticker-item"><span>🇮🇩</span> 270 Juta+ Penduduk</div>
+      <div class="ticker-item"><span>🏪</span> Jutaan Warung & Toko Tradisional</div>
+      <div class="ticker-item"><span>💬</span> WhatsApp = Kanal #1 Indonesia</div>
+      <div class="ticker-item"><span>🏝️</span> 17.000+ Pulau Terjangkau</div>
+      <div class="ticker-item"><span>🏢</span> Terdaftar di BEI (JATI)</div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section" id="fitur">
+    <div class="section-head">
+      <span class="section-tag">14 Modul Terintegrasi</span>
+      <h2 class="section-title">Satu platform. <span class="grad-text">Seluruh rantai distribusi.</span></h2>
+      <p class="section-sub">Dari principal sampai warung — setiap lapisan mendapatkan alat komunikasi yang tepat.</p>
+    </div>
+    <div class="features-grid" id="features-grid"></div>
+  </section>
+
+  <!-- SCENARIOS -->
+  <section class="section alt" id="skenario">
+    <div class="section-head">
+      <span class="section-tag">Skenario Implementasi</span>
+      <h2 class="section-title">Mulai dari mana saja. <span class="grad-text">Rakit sesuai kebutuhan.</span></h2>
+      <p class="section-sub">Tiga skenario yang terbukti, bisa dijalankan independen atau dikombinasikan.</p>
+    </div>
+    <div class="scenario-grid">
+      <div class="scenario-card glass" data-sc="a">
+        <div class="sc-num">A</div>
+        <h3>Distributor Enablement</h3>
+        <p>Bot cek stok, cek harga, dan ajukan pesanan terintegrasi ERP/WMS — respons dalam hitungan detik, tanpa menunggu sales visit.</p>
+        <ul>
+          <li>✅ Cek stok & harga real-time</li>
+          <li>✅ Pemesanan terintegrasi ERP</li>
+          <li>✅ Notifikasi promo per wilayah</li>
+          <li>✅ Onboarding distributor instan</li>
+        </ul>
+        <span class="sc-impact">Dampak: <b>keputusan pemesanan 4x lebih cepat</b></span>
+      </div>
+      <div class="scenario-card glass" data-sc="b">
+        <div class="sc-num">B</div>
+        <h3>Consumer Engagement</h3>
+        <p>AI chatbot edukasi produk, distribusi promo personal, chat commerce, dan CS 24/7 — semua di WhatsApp konsumen.</p>
+        <ul>
+          <li>✅ AI chatbot edukasi produk</li>
+          <li>✅ Kupon & promo personalisasi</li>
+          <li>✅ Belanja langsung di chat</li>
+          <li>✅ Komplain dengan status update</li>
+        </ul>
+        <span class="sc-impact">Dampak: <b>engagement +38%, CS cost −60%</b></span>
+      </div>
+      <div class="scenario-card glass" data-sc="c">
+        <div class="sc-num">C</div>
+        <h3>Loyalty & Trade Program</h3>
+        <p>Program insentif retailer dan warung yang aman: verifikasi SMS OTP, klaim teraudit, dan anti-fraud berlapis.</p>
+        <ul>
+          <li>✅ Verifikasi member via OTP</li>
+          <li>✅ Klaim insentif teraudit</li>
+          <li>✅ Notifikasi tiap transaksi</li>
+          <li>✅ Deteksi fraud otomatis</li>
+        </ul>
+        <span class="sc-impact">Dampak: <b>fraud −70%, partisipasi retailer naik</b></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section" id="cara-kerja">
+    <div class="section-head">
+      <span class="section-tag">Cara Kerja</span>
+      <h2 class="section-title">Aktif dalam <span class="grad-text">hitungan hari</span>, bukan bulan</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><span class="step-n">1</span><h4>Koneksikan Nomor</h4><p>Hubungkan nomor WhatsApp bisnis Anda dengan verifikasi QR — 5 menit.</p></div>
+      <div class="step"><span class="step-n">2</span><h4>Isi Knowledge Base</h4><p>Upload katalog, harga, dan FAQ. Bot langsung paham produk Anda.</p></div>
+      <div class="step"><span class="step-n">3</span><h4>Integrasikan ERP</h4><p>Tautkan ERP/WMS via API atau CSV. Stok & pesanan jadi real-time.</p></div>
+      <div class="step"><span class="step-n">4</span><h4>Luncurkan & Ukur</h4><p>Kirim kampanye pertama, pantau analytics, dan optimalkan terus.</p></div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section alt" id="harga">
+    <div class="section-head">
+      <span class="section-tag">Harga Transparan</span>
+      <h2 class="section-title">Paket yang <span class="grad-text">tumbuh bersama Anda</span></h2>
+      <div class="billing-toggle">
+        <button class="tg-btn active" data-period="monthly">Bulanan</button>
+        <button class="tg-btn" data-period="annual">Tahunan <span class="save-badge">−20%</span></button>
+      </div>
+    </div>
+    <div class="pricing-grid" id="pricing-grid"></div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section" id="testimoni">
+    <div class="section-head">
+      <span class="section-tag">Dipakai Perusahaan FMCG</span>
+      <h2 class="section-title">Mereka sudah <span class="grad-text">bertransformasi</span></h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card glass"><div class="stars">★★★★★</div><p>"Cek stok yang dulu butuh telepon berulang, sekarang distributor tinggal chat. Order naik 32% dalam 2 bulan."</p><div class="testi-user"><span class="avatar av1">RA</span><div><b>Rudi Anggara</b><small>Sales Director, PT Beras Nusantara</small></div></div></div>
+      <div class="testi-card glass"><div class="stars">★★★★★</div><p>"Warung-warung kami akhirnya bisa ikut program loyalti. Klaim insentif sekarang aman dengan OTP dan tercatat rapi."</p><div class="testi-user"><span class="avatar av2">SM</span><div><b>Siti Maharani</b><small>Trade Marketing, PT Minuman Segar Tbk</small></div></div></div>
+      <div class="testi-card glass"><div class="stars">★★★★★</div><p>"CS kami fokus ke kasus penting. Bot menjawab 70% pertanyaan repetitif — cost per interaksi turun drastis."</p><div class="testi-user"><span class="avatar av3">DW</span><div><b>Dwi Wibowo</b><small>Customer Care Head, PT Snack Lezat</small></div></div></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner glass">
+    <div class="cta-inner">
+      <h2>Siap menggerakkan seluruh rantai distribusi Anda?</h2>
+      <p>Bergabung dengan 500+ perusahaan yang sudah berkomunikasi lebih cepat, lebih efisien, lebih dekat.</p>
+      <button class="btn btn-primary btn-lg glow" onclick="App.go('auth',{mode:'register'})">Mulai Uji Coba Gratis →</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <span class="brand-mark">J</span>
+        <p class="footer-desc">JATIS Mobile FMCG Cloud Platform — produk PT Informasi Teknologi Indonesia Tbk (JATI). Terdaftar di Bursa Efek Indonesia.</p>
+        <div class="badges"><span class="iso-badge">ISO 9001</span><span class="iso-badge">ISO 27001</span><span class="iso-badge">WhatsApp BSP</span></div>
+      </div>
+      <div><h5>Produk</h5><a href="#fitur">Fitur</a><a href="#skenario">Skenario</a><a href="#harga">Harga</a></div>
+      <div><h5>Perusahaan</h5><a href="#">Tentang JATIS</a><a href="#">Karier</a><a href="#">Investor (JATI)</a></div>
+      <div><h5>Kontak</h5><p class="footer-desc">hello@jatis.com<br>(021) 7940946<br>Jl. Mampang Prapatan Raya No. 3, Jakarta Selatan 12790</p></div>
+    </div>
+    <div class="footer-bottom">© 2026 PT Informasi Teknologi Indonesia Tbk. Semua hak dilindungi. · <a href="#">Kebijakan Privasi</a> · <a href="#">Syarat Layanan</a></div>
+  </footer>
+</div>
+
+<!-- ══════════════ AUTH ══════════════ -->
+<div id="auth" class="view" hidden>
+  <div class="auth-wrap">
+    <div class="auth-card glass-strong">
+      <div class="auth-brand"><a class="brand" href="#" onclick="App.go('landing')"><span class="brand-mark">J</span><span class="brand-text">JATIS<b>·FMCG</b></span></a></div>
+      <div class="auth-tabs">
+        <button class="auth-tab active" data-mode="login">Masuk</button>
+        <button class="auth-tab" data-mode="register">Daftar</button>
+      </div>
+      <form id="auth-form" autocomplete="off">
+        <div id="reg-fields" class="field-grid" hidden>
+          <label class="field"><span>Nama Perusahaan</span><input id="f-company" type="text" placeholder="PT Makanan Nusantara" required></label>
+          <label class="field"><span>Nama Lengkap</span><input id="f-name" type="text" placeholder="Budi Santoso" required></label>
+        </div>
+        <label class="field"><span>Email Korporat</span><input id="f-email" type="email" placeholder="nama@perusahaan.co.id" required></label>
+        <label class="field"><span>Kata Sandi</span><input id="f-pass" type="password" placeholder="••••••••••" required><small>Min. 12 karakter</small></label>
+        <div id="otp-step" hidden>
+          <label class="field"><span>Kode OTP (dikirim ke WhatsApp Anda)</span><div class="otp-inputs" id="otp-box"></div></label>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block glow" id="auth-submit">Masuk →</button>
+        <button type="button" class="btn btn-demo btn-block" onclick="App.demoLogin()">⚡ Masuk sebagai Demo (PT Makanan Nusantara)</button>
+        <p class="auth-foot">© 2026 PT Informasi Teknologi Indonesia Tbk</p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ PORTAL ══════════════ -->
+<div id="portal" class="view" hidden>
+  <div class="portal">
+    <aside class="sidebar glass" id="sidebar">
+      <div class="sidebar-head">
+        <a class="brand" href="#" onclick="App.go('dashboard')"><span class="brand-mark">J</span><span class="brand-text">JATIS<b>·FMCG</b></span></a>
+        <button class="icon-btn sidebar-close" onclick="App.toggleSidebar(false)">✕</button>
+      </div>
+      <div class="tenant-chip" onclick="App.go('settings')">
+        <span class="avatar av4">MN</span>
+        <div><b id="tenant-name">PT Makanan Nusantara</b><small id="tenant-plan">Plan: FMCG Growth</small></div>
+      </div>
+      <nav class="side-nav" id="side-nav">
+        <a class="nav-item active" data-view="dashboard"><span class="ni-ico">📊</span>Dashboard</a>
+        <a class="nav-item" data-view="channels"><span class="ni-ico">📡</span>Channels<span class="ni-badge warn" id="ch-badge">1</span></a>
+        <a class="nav-item" data-view="bot"><span class="ni-ico">🤖</span>Chatbot Studio</a>
+        <a class="nav-item" data-view="campaigns"><span class="ni-ico">📣</span>Kampanye</a>
+        <a class="nav-item" data-view="inbox"><span class="ni-ico">💬</span>Agent Inbox<span class="ni-badge" id="inbox-badge">4</span></a>
+        <a class="nav-item" data-view="otp"><span class="ni-ico">🔐</span>OTP Service</a>
+        <a class="nav-item" data-view="loyalty"><span class="ni-ico">🏆</span>Loyalty & Trade</a>
+        <a class="nav-item" data-view="analytics"><span class="ni-ico">📈</span>Analytics</a>
+        <a class="nav-item" data-view="billing"><span class="ni-ico">💳</span>Billing & Usage</a>
+        <a class="nav-item" data-view="safety"><span class="ni-ico">🛡️</span>Content Safety<span class="ni-badge warn" id="safety-badge">2</span></a>
+        <a class="nav-item admin-only" data-view="admin"><span class="ni-ico">🖥️</span>Admin Console</a>
+        <a class="nav-item" data-view="settings"><span class="ni-ico">⚙️</span>Pengaturan</a>
+      </nav>
+      <div class="sidebar-foot">
+        <div class="usage-mini">
+          <div class="um-head"><span>Kuota Pesan Bulan Ini</span><b id="quota-pct">68%</b></div>
+          <div class="progress"><i id="quota-bar" style="width:68%"></i></div>
+          <small>340.000 / 500.000 pesan</small>
+        </div>
+        <button class="btn btn-ghost btn-sm btn-block" onclick="App.logout()">🚪 Keluar</button>
+      </div>
+    </aside>
+    <div class="sidebar-backdrop" onclick="App.toggleSidebar(false)"></div>
+
+    <main class="main">
+      <header class="topbar glass">
+        <button class="icon-btn" onclick="App.toggleSidebar(true)">☰</button>
+        <div class="topbar-search"><span>🔍</span><input id="global-search" placeholder="Cari pesan, kontak, kampanye… (⌘K)"></div>
+        <div class="topbar-right">
+          <button class="icon-btn" onclick="App.go('billing')" title="Saldo & kuota"><span class="pulse-dot"><i></i></span>💰 <span id="tb-credit">Rp 4,2 jt</span></button>
+          <button class="icon-btn" onclick="App.go('safety')" title="Moderasi">🛡️<span class="ni-badge warn" id="tb-safety">2</span></button>
+          <button class="icon-btn" onclick="App.go('settings')">🔔<span class="ni-badge">3</span></button>
+          <button class="avatar av4 user-avatar" onclick="App.go('settings')">MN</button>
+        </div>
+      </header>
+
+      <!-- DASHBOARD -->
+      <section class="view-sec" id="view-dashboard">
+        <div class="sec-head">
+          <div><h2>Selamat datang kembali, <span class="grad-text" id="dash-name">Budi</span> 👋</h2><p id="dash-date" class="sec-sub"></p></div>
+          <div class="sec-actions"><button class="btn btn-ghost btn-sm" onclick="App.go('analytics')">Laporan</button><button class="btn btn-primary btn-sm glow" onclick="App.go('campaigns')">+ Kampanye Baru</button></div>
+        </div>
+        <div class="kpi-grid" id="kpi-grid"></div>
+        <div class="dash-grid">
+          <div class="card glass">
+            <div class="card-head"><h3>Volume Pesan 30 Hari</h3><div class="seg-toggle"><button class="sg active">Pesan</button><button class="sg">OTP</button></div></div>
+            <div id="chart-volume" class="chart"></div>
+          </div>
+          <div class="card glass">
+            <div class="card-head"><h3>Distribusi Kanal</h3><span class="chip">Live</span></div>
+            <div id="chart-donut" class="chart donut-wrap"></div>
+            <div class="donut-legend" id="donut-legend"></div>
+          </div>
+        </div>
+        <div class="dash-grid-2">
+          <div class="card glass">
+            <div class="card-head"><h3>Kesehatan Kanal</h3><button class="icon-btn" onclick="App.go('channels')">Detail →</button></div>
+            <div id="channels-health"></div>
+          </div>
+          <div class="card glass">
+            <div class="card-head"><h3>Aktivitas Terbaru</h3></div>
+            <div id="activity-feed"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CHANNELS -->
+      <section class="view-sec" id="view-channels" hidden>
+        <div class="sec-head"><div><h2>Channels</h2><p class="sec-sub">Kelola kanal komunikasi bisnis Anda.</p></div><div class="sec-actions"><button class="btn btn-primary btn-sm glow" onclick="App.connectChannel()">+ Hubungkan Kanal</button></div></div>
+        <div class="channels-grid" id="channels-grid"></div>
+        <div class="card glass"><div class="card-head"><h3>Template Pesan WhatsApp</h3><span class="chip">2 pending review</span></div><div id="templates-table"></div></div>
+      </section>
+
+      <!-- CHATBOT STUDIO -->
+      <section class="view-sec" id="view-bot" hidden>
+        <div class="sec-head"><div><h2>Chatbot Studio</h2><p class="sec-sub">Bangun alur percakapan tanpa coding.</p></div><div class="sec-actions"><span class="chip status-chip live">● Deployed v2.4</span><button class="btn btn-primary btn-sm glow" onclick="App.deployBot()">🚀 Deploy</button></div></div>
+        <div class="bot-grid">
+          <div class="card glass">
+            <div class="card-head"><h3>Alur Utama</h3><span class="chip">versi draft</span></div>
+            <div class="flow-canvas" id="flow-canvas">
+              <div class="flow-node node-start" data-node="start"><span class="node-ico">🚀</span><b>Mulai</b><small>Pesan masuk</small></div>
+              <div class="flow-conn"></div>
+              <div class="flow-node" data-node="intent"><span class="node-ico">🧠</span><b>Deteksi Intent</b><small>AI + keyword</small></div>
+              <div class="flow-conn"></div>
+              <div class="flow-node" data-node="branch"><span class="node-ico">🔀</span><b>Cabang</b><small>stok / harga / order / cs</small></div>
+              <div class="flow-branches">
+                <div class="flow-branch"><span>💹</span> Cek Stok</div>
+                <div class="flow-branch"><span>🏷️</span> Cek Harga</div>
+                <div class="flow-branch"><span>📦</span> Ajukan Pesanan</div>
+                <div class="flow-branch"><span>🎧</span> Hubungi CS</div>
+              </div>
+              <div class="flow-conn"></div>
+              <div class="flow-node node-end"><span class="node-ico">✅</span><b>Respons</b><small>ERP / KB / human</small></div>
+            </div>
+          </div>
+          <div class="card glass">
+            <div class="card-head"><h3>Simulasi Chat</h3><span class="chip">test mode</span></div>
+            <div class="bot-test">
+              <div class="bot-test-chat" id="bot-test-chat">
+                <div class="msg in">cek stok indomie goreng</div>
+                <div class="msg out">✅ Stok <b>Indomie Goreng (Dus)</b>: <b>1.240 dus</b> — Gudang Cikarang. Mau pesan?<br><small>1. Ya, pesan 2. Tidak</small></div>
+              </div>
+              <div class="bot-test-input"><input id="bot-test-input" placeholder="Ketik perintah uji…"><button onclick="App.botTest()">Kirim</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="card glass" style="margin-top:16px">
+          <div class="card-head"><h3>Knowledge Base</h3><button class="btn btn-ghost btn-sm" onclick="App.uploadKB()">⬆️ Upload Dokumen</button></div>
+          <div id="kb-list"></div>
+        </div>
+      </section>
+
+      <!-- CAMPAIGNS -->
+      <section class="view-sec" id="view-campaigns" hidden>
+        <div class="sec-head"><div><h2>Kampanye</h2><p class="sec-sub">Broadcast tersegmentasi dengan approval & moderasi.</p></div><div class="sec-actions"><button class="btn btn-primary btn-sm glow" onclick="App.openCampaignWizard()">+ Kampanye Baru</button></div></div>
+        <div id="campaign-list"></div>
+        <div class="card glass" id="campaign-wizard" hidden>
+          <div class="card-head"><h3>Wizard Kampanye Baru</h3><span class="chip" id="cw-step-label">Langkah 1/4 · Konten</span></div>
+          <div class="wizard-steps"><i class="ws active" data-step="1">1</i><i class="ws-line"></i><i class="ws" data-step="2">2</i><i class="ws-line"></i><i class="ws" data-step="3">3</i><i class="ws-line"></i><i class="ws" data-step="4">4</i></div>
+          <div id="cw-body"></div>
+          <div class="wizard-nav"><button class="btn btn-ghost btn-sm" id="cw-prev" onclick="App.cwNav(-1)">← Kembali</button><button class="btn btn-primary btn-sm" id="cw-next" onclick="App.cwNav(1)">Lanjut →</button></div>
+        </div>
+      </section>
+
+      <!-- INBOX -->
+      <section class="view-sec" id="view-inbox" hidden>
+        <div class="sec-head"><div><h2>Agent Inbox</h2><p class="sec-sub">Semua percakapan, satu tempat, konteks lengkap.</p></div><div class="sec-actions"><span class="chip status-chip live">● 4 agent online</span></div></div>
+        <div class="inbox-layout">
+          <div class="card glass inbox-list-card">
+            <div class="inbox-filter"><input placeholder="Cari percakapan…"><span class="chip">Semua</span></div>
+            <div id="inbox-list"></div>
+          </div>
+          <div class="card glass inbox-detail">
+            <div id="inbox-detail-empty" class="inbox-empty">👈 Pilih percakapan untuk melihat konteks & membalas</div>
+            <div id="inbox-detail" hidden>
+              <div class="inbox-detail-head" id="inbox-detail-head"></div>
+              <div class="inbox-context" id="inbox-context"></div>
+              <div class="inbox-thread" id="inbox-thread"></div>
+              <div class="inbox-reply"><input id="inbox-reply-input" placeholder="Ketik balasan…" onkeydown="if(event.key==='Enter')App.sendReply()"><button class="btn btn-primary" onclick="App.sendReply()">Kirim ➤</button></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- OTP -->
+      <section class="view-sec" id="view-otp" hidden>
+        <div class="sec-head"><div><h2>OTP & Verifikasi</h2><p class="sec-sub">Amankan loyalti, klaim, dan login dengan kode sekali pakai.</p></div><div class="sec-actions"><button class="btn btn-primary btn-sm glow" onclick="App.sendOtpDemo()">📱 Kirim OTP Uji</button></div></div>
+        <div class="otp-grid">
+          <div class="card glass"><div class="card-head"><h3>Statistik OTP</h3></div><div id="chart-otp" class="chart"></div></div>
+          <div class="card glass">
+            <div class="card-head"><h3>Riwayat OTP Terbaru</h3></div>
+            <div id="otp-log"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LOYALTY -->
+      <section class="view-sec" id="view-loyalty" hidden>
+        <div class="sec-head"><div><h2>Loyalty & Trade Program</h2><p class="sec-sub">Program insentif retailer yang aman & teraudit.</p></div><div class="sec-actions"><span class="chip status-chip live">● Program aktif</span></div></div>
+        <div class="kpi-grid kpi-3" id="loyalty-kpi"></div>
+        <div class="card glass">
+          <div class="card-head"><h3>Klaim Insentif — Menunggu Proses</h3><span class="chip" id="claim-count">3 klaim</span></div>
+          <div id="claims-table"></div>
+        </div>
+        <div class="card glass">
+          <div class="card-head"><h3>Member Teratas</h3></div>
+          <div id="members-table"></div>
+        </div>
+      </section>
+
+      <!-- ANALYTICS -->
+      <section class="view-sec" id="view-analytics" hidden>
+        <div class="sec-head"><div><h2>Analytics & Laporan</h2><p class="sec-sub">Ukur setiap interaksi, kampanye, dan rupiah.</p></div><div class="sec-actions"><button class="btn btn-ghost btn-sm" onclick="App.exportReport()">⬇️ Ekspor CSV</button></div></div>
+        <div class="dash-grid">
+          <div class="card glass"><div class="card-head"><h3>Performa Kampanye</h3></div><div id="chart-campaign" class="chart"></div></div>
+          <div class="card glass"><div class="card-head"><h3>Metrik CS</h3></div><div id="chart-cs" class="chart"></div></div>
+        </div>
+        <div class="card glass">
+          <div class="card-head"><h3>Biaya per Produk</h3><span class="chip">usage-based</span></div>
+          <div id="chart-cost" class="chart"></div>
+        </div>
+      </section>
+
+      <!-- BILLING -->
+      <section class="view-sec" id="view-billing" hidden>
+        <div class="sec-head"><div><h2>Billing & Usage</h2><p class="sec-sub">Transparan, real-time, tanpa kejutan.</p></div><div class="sec-actions"><button class="btn btn-primary btn-sm glow" onclick="App.topUp()">💰 Top-up Saldo</button></div></div>
+        <div class="kpi-grid kpi-3" id="billing-kpi"></div>
+        <div class="dash-grid-2">
+          <div class="card glass">
+            <div class="card-head"><h3>Pemakaian vs Kuota</h3></div>
+            <div id="usage-bars"></div>
+          </div>
+          <div class="card glass">
+            <div class="card-head"><h3>Invoice Terakhir</h3></div>
+            <div id="invoice-table"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTENT SAFETY -->
+      <section class="view-sec" id="view-safety" hidden>
+        <div class="sec-head"><div><h2>Content Safety</h2><p class="sec-sub">Moderasi konten berjenjang sebelum dikirim.</p></div><div class="sec-actions"><span class="chip status-chip live">● Pipeline aktif</span></div></div>
+        <div class="safety-summary" id="safety-summary"></div>
+        <div class="card glass"><div class="card-head"><h3>Antrian Review</h3><span class="chip">SLA: L3 ≤ 5 menit</span></div><div id="safety-queue"></div></div>
+      </section>
+
+      <!-- ADMIN -->
+      <section class="view-sec" id="view-admin" hidden>
+        <div class="sec-head"><div><h2>Admin Console <span class="chip warn-chip">Super Admin</span></h2><p class="sec-sub">Kontrol platform tingkat JATIS.</p></div></div>
+        <div class="kpi-grid kpi-4" id="admin-kpi"></div>
+        <div class="card glass">
+          <div class="card-head"><h3>Tenant Management</h3><span class="chip">23 tenant</span></div>
+          <div id="admin-tenants"></div>
+        </div>
+        <div class="card glass">
+          <div class="card-head"><h3>Fraud & Anomaly</h3></div>
+          <div id="admin-fraud"></div>
+        </div>
+      </section>
+
+      <!-- SETTINGS -->
+      <section class="view-sec" id="view-settings" hidden>
+        <div class="sec-head"><div><h2>Pengaturan</h2><p class="sec-sub">Profil, tim, keamanan, dan API.</p></div></div>
+        <div class="dash-grid-2">
+          <div class="card glass">
+            <div class="card-head"><h3>Profil Workspace</h3></div>
+            <label class="field"><span>Nama Perusahaan</span><input value="PT Makanan Nusantara"></label>
+            <label class="field"><span>Email</span><input value="admin@makanannusantara.co.id"></label>
+            <label class="field"><span>WhatsApp Bisnis</span><input value="+62 812-3456-7890"></label>
+            <button class="btn btn-primary btn-sm glow" onclick="App.toast('✅ Perubahan disimpan')">Simpan</button>
+          </div>
+          <div class="card glass">
+            <div class="card-head"><h3>Tim & Role</h3></div>
+            <div id="team-list"></div>
+          </div>
+        </div>
+        <div class="dash-grid-2">
+          <div class="card glass">
+            <div class="card-head"><h3>Keamanan</h3></div>
+            <div class="setting-row"><span>🔐 MFA (Authenticator)</span><label class="switch"><input type="checkbox" checked><i></i></label></div>
+            <div class="setting-row"><span>📱 Step-up aksi kritis</span><label class="switch"><input type="checkbox" checked><i></i></label></div>
+            <div class="setting-row"><span>🖥️ Session timeout 15 menit</span><label class="switch"><input type="checkbox" checked><i></i></label></div>
+          </div>
+          <div class="card glass">
+            <div class="card-head"><h3>API Keys</h3><button class="btn btn-ghost btn-sm" onclick="App.newApiKey()">+ Buat Key</button></div>
+            <div id="api-keys"></div>
+            <div class="card-head" style="margin-top:14px"><h3>Webhooks</h3></div>
+            <div id="webhook-list"></div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</div>
+
+<!-- modals & toasts -->
+<div id="modal-root"></div>
+<div id="toast-root"></div>
+<div id="cmd-palette" class="cmd-palette" hidden></div>
+
+<script src="assets/data.js"></script>
+<script src="assets/charts.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
